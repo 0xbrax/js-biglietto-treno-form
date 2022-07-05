@@ -7,39 +7,70 @@
         <title>Rail Radar | Buy your train ticket</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />        
     </head>
 
     <body>
-        <div>
-            <input id="user" name="user" type="text" placeholder="Inserisci nome e cognome">
-            <input id="km" name="km" type="text" placeholder="KM da percorrere">
-            <select id="age" name="age" id="">
-                <option value="Biglietto Standard">Maggiorenne</option>
-                <option value="Biglietto Young">Minorenne</option>
-                <option value="Biglietto Over65">Over 65</option>
-            </select>
+        <main>
+            <section>
+                <h1 class="p-15">Calcola il prezzo del tuo biglietto</h1>
 
-            <br />
+                <div class="back-white p-30 flex">
+                    <div class="input-container flex">
+                        <label for="user">Nome e Cognome</label>
+                        <input id="user" name="user" type="text" minlength="1" placeholder="Inserisci nome e cognome">
+                    </div>
 
-            <button id="btn-generate">
-                Genera
-            </button>
-            <button id="btn-delete">
-                Annulla
-            </button>
-        </div>
+                    <div class="input-container flex">
+                        <label for="km">KM da percorrere</label>
+                        <input id="km" name="km" type="text" minlength="1" placeholder="Inserisci i KM">
+                    </div>
 
-        <div id="ticket" class="noShow-ticket">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
+                    <div class="input-container flex">
+                        <label for="age">Fascia d'età</label>
+                        <select id="age" name="age" id="">
+                            <option value="Biglietto Standard">Maggiorenne</option>
+                            <option value="Biglietto Young">Minorenne</option>
+                            <option value="Biglietto Over65">Over 65</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-container">
+                        <button id="btn-generate">
+                            Genera
+                        </button>
+                        <button id="btn-delete">
+                            Annulla
+                        </button>
+                    </div>
+                </div>
+        
+                <div id="ticket" class="noShow-ticket">
+                    <h2 class="p-15">Il tuo biglietto</h2>
+
+                    <div class="ticket-container back-white">
+                        <div class="ticket-table">
+                            <ul>
+                                <li>Nome Passeggero</li>
+                                <li>Offerta</li>
+                                <li>Carrozza</li>
+                                <li>N. prenotazione</li>
+                                <li>Prezzo</li>
+                            </ul>
+                            
+                            <ul class="ticket-info">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
 
         <script type="text/javascript" src="js/main.js">

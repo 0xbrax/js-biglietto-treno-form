@@ -8,14 +8,111 @@ body {
     font-family: sans-serif;
 }
 
-ul {
-    list-style: none;
+h1,
+h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.back-white {
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main {
+    background-color: #e53170;
+    height: 100vh;
+}
+
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.input-container {
+    width: calc(100% / 3);
+}
+
+label {
+    width: 100%;
+    color: #e53170;
+    text-align: center;
+}
+
+input,
+select {
+    width: 100%;
+    border: 2px solid #e53170;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 5px;
+    text-align: center;
+    margin: 15px 50px;
+}
+
+input::placeholder,
+option {
+    color: #ff8906;
+}
+
+input:focus {
+    outline: 2px solid #F25F4C;
+    outline-offset: 1px;
+}
+
+button {
+    border: 0;
+    background-color: #ff8906;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 30px 15px 0 15px;
+}
+
+button:hover {
+    background-color: #f25f4c;
 }
 
 .noShow-ticket {
     display: none;
 }
 
-.show-ticket {
-    display: block;
+.ticket-container {
+    padding: 15px;
+}
+
+.ticket-table {
+    border: 2px solid #F25F4C;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; 
+}
+
+li {
+    width: calc(100% / 5);
+}
+
+ul:first-child {
+    margin-bottom: 15px;
+    font-weight: bold;
 }
