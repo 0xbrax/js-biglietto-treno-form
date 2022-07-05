@@ -1,5 +1,33 @@
+const user = document.getElementById('user');
+const km = document.getElementById('km');
+const age = document.getElementById('age');
 
+//console.log(user.value);
+console.log(km.value);
+//console.log(age.value);
 
+const slotUser = document.querySelector('#ticket ul li:nth-child(1)');
+const slotAge = document.querySelector('#ticket ul li:nth-child(2)');
+let slotSeat = document.querySelector('#ticket ul li:nth-child(3)');
+let slotID = document.querySelector('#ticket ul li:nth-child(4)');
+let slotPrice = document.querySelector('#ticket ul li:nth-child(5)');
+
+slotSeat = Math.floor((Math.random() * 10) + 1);
+slotID = Math.floor((Math.random() * 10000) + 90000);
+
+console.log(user.value);
+console.log(age.value);
+console.log(slotSeat);
+console.log(slotID);
+//console.log(slotPrice);
+
+const btnGen = document.getElementById('btn-generate');
+btnGen.addEventListener('click',
+    function(){
+        const ticket = document.getElementById('ticket');
+    
+    }
+)
 
 /*
 alert('Benvenuto, compra ora il tuo biglietto del treno!')
