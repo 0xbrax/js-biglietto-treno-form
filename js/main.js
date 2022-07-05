@@ -4,17 +4,6 @@ const age = document.getElementById('age');
 
 km = parseInt(km.value);
 
-/*
-const btnGen = document.getElementById('btn-generate');
-btnGen.addEventListener('click',
-    function(){
-        const ticket = document.getElementById('ticket');
-        
-        ticket.classList.add('.show-ticket');
-    }
-)
-*/
-
 let slotUser = document.querySelector('#ticket ul li:nth-child(1)');
 let slotAge = document.querySelector('#ticket ul li:nth-child(2)');
 let slotSeat = document.querySelector('#ticket ul li:nth-child(3)');
@@ -33,3 +22,24 @@ if (slotAge == ('Biglietto Standard')) {
 } else {
     slotPrice.innerHTML = new Intl.NumberFormat('it-IT', {style: 'currency', currency: 'EUR', minimumFractionDigits: 2}).format((0.21 * km) - ((40 / 100) * (0.21 * km)));
 }
+
+const btnGen = document.getElementById('btn-generate');
+btnGen.addEventListener('click',
+    function(){
+        const ticket = document.getElementById('ticket');
+        ticket.classList.remove('noShow-ticket');
+        ticket.classList.add('show-ticket');
+    }
+)
+
+const btnDel = document.getElementById('btn-delete');
+btnDel.addEventListener('click',
+    function(){
+        const ticket = document.getElementById('ticket');
+        ticket.classList.remove('show-ticket');
+        ticket.classList.add('noShow-ticket');
+        user.value = user.defaultValue;
+        km.value = km.defaultValue;
+        age.value = age.defaultValue;
+    }
+)
