@@ -6,7 +6,6 @@ const btnGen = document.getElementById('btn-generate');
 btnGen.addEventListener('click',
     function(){
         let km = document.getElementById('km');
-        //km = parseInt(km.value);
 
         if (user.value == '' || km.value == '') {
             alert('Compila i campi mancanti.');
@@ -40,6 +39,8 @@ btnGen.addEventListener('click',
 const btnDel = document.getElementById('btn-delete');
 btnDel.addEventListener('click',
     function(){
+        let km = document.getElementById('km');
+        
         ticket.classList.remove('animate__backInLeft');
         ticket.classList.add('animate__backOutLeft');
 
